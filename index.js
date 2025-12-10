@@ -2,12 +2,13 @@
        Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
     */
 
-const changeTitle = function () {
-  const h1 = document.querySelector("h1");
-  h1.innerText = "U1-W3-D32-DOM";
+const changeTitle = function (el) {
+  const element = document.querySelector(el);
+  element.innerText = "U1-W3-D32-DOM";
 };
 
-changeTitle();
+changeTitle("h1");
+changeTitle("title");
 
 /* ESERCIZIO 2
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
@@ -39,6 +40,7 @@ const changeUrls = function () {
   const links = document.querySelectorAll("a:not(footer a)");
   links.forEach((a) => {
     a.href = "https://www.google.com";
+    a.target = "_blank";
   });
 };
 
