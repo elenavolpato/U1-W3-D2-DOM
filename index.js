@@ -36,7 +36,7 @@ changePcontent();
       */
 
 const changeUrls = function () {
-  const links = document.querySelectorAll("a");
+  const links = document.querySelectorAll("a:not(footer a)");
   links.forEach((a) => {
     a.href = "https://www.google.com";
   });
